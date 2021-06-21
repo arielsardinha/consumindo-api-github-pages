@@ -1,54 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-/* geral */
-nav div,
-header div,
-section .box-sec1 {
-  width: 80%;
-  margin: auto;
-}
-/* header */
-header {
-  margin: 20px 0;
-}
-header input {
-  margin: 30px 0;
-  height: 30px;
-  width: 300px;
-  padding: 0 15px;
-}
-/* sessao 1 */
-.box-sec1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-/* sessao 1 perfil */
-.perfil img {
-  width: 200px;
-}
-.perfil p {
-  padding: 20px 0;
-}
-.perfil a {
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  padding: 10px 40px;
-  font-size: 20px;
-  border-radius: 5px;
-}
-.perfil div {
-  margin-top: 10px;
-  text-align: center;
-}
-.perfil a:hover {
-  box-shadow: 0 0 2px black;
-  background-color: rgb(56, 56, 56);
-}
+<template>
+  <div class="itens">
+    <div>
+      <a :href="repo.html_url">{{ repo.name }}</a>
+    </div>
+    <div class="res">
+      <p>start:{{ repo.stargazers_count }}</p>
+      <p>watch:{{ repo.watchers_count }}</p>
+      <p>fork:{{ repo.forks_count }}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["repo"],
+};
+</script>
+
+<style>
 /* sessao 1 repositorios */
 
 .repositorios {
@@ -88,7 +57,7 @@ header input {
   padding: 3px 10px;
   border-radius: 5px;
   font-weight: 700;
-  color: white;
+  color: rgb(146, 142, 142);
 }
 .repositorios .res p:first-child {
   background-color: green;
@@ -97,3 +66,4 @@ header input {
   background-color: yellow;
   color: black;
 }
+</style>

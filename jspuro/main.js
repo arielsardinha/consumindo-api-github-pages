@@ -49,7 +49,7 @@
         <p>Seguidores: ${user.followers}</p>
         <p>Seguindo: ${user.following}</p>
         <div>
-            <a href="${user.html_url}">Ver Perfil</a>
+            <a href="${user.html_url}">ver Perfil no github</a>
         </div>
     `;
   }
