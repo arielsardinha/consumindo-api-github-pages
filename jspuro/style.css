@@ -35,6 +35,7 @@ header i {
   background-color: black;
   font-size: 20px;
   padding: 5px 30px;
+  cursor: pointer;
 }
 /* sessao 1 */
 .box-sec1 {
