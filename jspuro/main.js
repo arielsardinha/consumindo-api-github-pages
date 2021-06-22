@@ -44,21 +44,40 @@
   }
   function showProfile(user) {
     perfil.innerHTML = `
-        <img src="${user.avatar_url}" alt="imagem do ${user.name}" />
-        <p>Repositorios: ${user.public_repos}</p>
-        <p>Seguidores: ${user.followers}</p>
-        <p>Seguindo: ${user.following}</p>
-        <div>
-            <a href="${user.html_url}">ver Perfil no github</a>
-        </div>
+        <img src="${user.avatar_url}" alt="" />
+          <div>
+            <a href="${user.html_url}"><h3>${user.name}</h3></a>
+            <p>arielsardinha</p>
+          </div>
+          <div class="txt">
+            <div>
+              <i class="bi bi-briefcase"></i>
+              <p>company</p>
+            </div>
+            <div>
+              <i class="bi bi-geo"></i>
+              <p>cidade</p>
+            </div>
+            <div>
+              <i class="bi bi-star"></i>
+              <p>${user.followers}</p>
+            </div>
+            <div>
+              <i class="bi bi-archive"></i>
+              <p>${user.public_repos}</p>
+            </div>
+            <div>
+              <i class="bi bi-diagram-2"></i>
+              <p>${user.following}</p>
+            </div>
+          </div>
     `;
   }
   btnNome.addEventListener("keyup", (e) => {
     const user = e.target.value;
-    if (user.length > 1)
-      getUser(user).then((res) => {
-        showProfile(res.profile);
-        showRepos(res.repos);
-      });
+    getUser(user).then((res) => {
+      showProfile(res.profile);
+      showRepos(res.repos);
+    });
   });
 })();

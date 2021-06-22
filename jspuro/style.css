@@ -5,7 +5,7 @@
 }
 /* geral */
 nav div,
-header div,
+header .box,
 section .box-sec1 {
   width: 80%;
   margin: auto;
@@ -23,9 +23,7 @@ header input {
 header div {
   display: flex;
   align-items: center;
-}
-header div:last-child {
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 header h1 span {
   font-weight: 300;
@@ -47,24 +45,27 @@ header i {
 .perfil img {
   width: 200px;
 }
-.perfil p {
-  padding: 20px 0;
-}
 .perfil a {
-  background-color: black;
-  color: white;
   text-decoration: none;
-  padding: 10px 40px;
-  font-size: 20px;
-  border-radius: 5px;
+  color: black;
 }
-.perfil div {
-  margin-top: 10px;
-  text-align: center;
+.perfil .txt {
+  margin-top: 20px;
 }
-.perfil a:hover {
-  box-shadow: 0 0 2px black;
-  background-color: rgb(56, 56, 56);
+.perfil .txt div {
+  margin-top: 5px;
+}
+.perfil p {
+  color: #6d6d6d;
+}
+.perfil .txt p {
+  margin-left: 10px;
+}
+.perfil .txt div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 /* sessao 1 repositorios */
 
