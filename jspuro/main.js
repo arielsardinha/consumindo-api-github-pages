@@ -6,7 +6,7 @@
   const url = "https://api.github.com/users";
   const client_id = "162becdafabba89ae9c3";
   const client_secrets = "f40c9539739c4d685246f4122ad1d393ce81f64f";
-  const qPage = 7;
+  const qPage = 100;
   const sort = "created: asc";
 
   async function getUser(user) {
@@ -28,22 +28,17 @@
       console.log(repo);
       output += `
         <div class="itens">
+            <a href="${repo.html_url}">${repo.name}</a>
+            <p>${repo.description}</p>
             <div>
-                <a href="${repo.html_url}">${repo.name}</a>
+              <i class="bi bi-star"></i>
             </div>
-            <div class="res">
-                <p>start:${repo.stargazers_count}</p>
-                <p>watch:${repo.watchers_count}</p>
-                <p>fork:${repo.forks_count}</p>
-            </div>
-        </div>
-        
+          </div>
         `;
     });
     repositorios.innerHTML = output;
   }
   function showProfile(user) {
-    console.log(user);
     perfil.innerHTML = `
         <img src="${user.avatar_url}" alt="" />
           <div>

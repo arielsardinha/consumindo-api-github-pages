@@ -39,7 +39,6 @@ header i {
 .box-sec1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 /* sessao 1 perfil */
 .perfil img {
@@ -71,53 +70,36 @@ header i {
 
 .repositorios {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   height: 370px;
-  padding: 5px 30px;
-  margin-top: 30px;
+  margin-left: 5%;
   overflow: auto;
-}
-.repositorios .itens {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  border: solid 1px rgb(209, 209, 209);
+  align-items: flex-start;
+  text-align: left;
 }
-.repositorios .itens div {
-  margin: 0 10px;
-}
-.repositorios .itens .res {
-  display: flex;
-}
-.repositorios .itens a {
+.itens a {
   text-decoration: none;
-}
-.repositorios .itens a:hover {
-  text-decoration: underline;
-}
-.repositorios .itens div:first-child {
-  color: blue;
-}
-.repositorios .res p {
-  margin: 0 5px;
-  background-color: blue;
-  padding: 3px 10px;
-  border-radius: 5px;
-  font-weight: 700;
-  color: white;
-}
-.repositorios .res p:first-child {
-  background-color: green;
-}
-.repositorios .res p:last-child {
-  background-color: yellow;
   color: black;
+  font-weight: 700;
+  font-size: 25px;
 }
-
+.itens p {
+  color: #6d6d6d;
+}
 @media (max-width: 700px) {
   header .box {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .repositorios {
+    padding-top: 20px;
+    border-top: solid 1px;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .box-sec1 {
     flex-direction: column;
   }
 }
