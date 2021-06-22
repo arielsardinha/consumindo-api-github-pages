@@ -30,6 +30,12 @@ header div:last-child {
 header h1 span {
   font-weight: 300;
 }
+header i {
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  padding: 5px 30px;
+}
 /* sessao 1 */
 .box-sec1 {
   display: flex;
