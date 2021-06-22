@@ -43,24 +43,25 @@
     repositorios.innerHTML = output;
   }
   function showProfile(user) {
+    console.log(user);
     perfil.innerHTML = `
         <img src="${user.avatar_url}" alt="" />
           <div>
             <a href="${user.html_url}"><h3>${user.name}</h3></a>
-            <p>arielsardinha</p>
+            <p>${user.login}</p>
           </div>
           <div class="txt">
             <div>
               <i class="bi bi-briefcase"></i>
-              <p>company</p>
+              <p>${user.company}</p>
             </div>
             <div>
               <i class="bi bi-geo"></i>
-              <p>cidade</p>
+              <p>${user.location}</p>
             </div>
             <div>
               <i class="bi bi-star"></i>
-              <p>${user.followers}</p>
+              <p></p>
             </div>
             <div>
               <i class="bi bi-archive"></i>
@@ -68,7 +69,7 @@
             </div>
             <div>
               <i class="bi bi-diagram-2"></i>
-              <p>${user.following}</p>
+              <p>${user.followers}</p>
             </div>
           </div>
     `;
