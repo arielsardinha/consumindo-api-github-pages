@@ -114,3 +114,9 @@ header i {
   background-color: yellow;
   color: black;
 }
+
+@media (max-width: 700px) {
+  header .box {
+    flex-direction: column;
+  }
+}
