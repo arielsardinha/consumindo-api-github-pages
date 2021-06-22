@@ -20,6 +20,16 @@ header input {
   width: 300px;
   padding: 0 15px;
 }
+header div {
+  display: flex;
+  align-items: center;
+}
+header div:last-child {
+  justify-content: flex-end;
+}
+header h1 span {
+  font-weight: 300;
+}
 /* sessao 1 */
 .box-sec1 {
   display: flex;
